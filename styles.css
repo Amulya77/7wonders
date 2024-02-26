@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+body{
+    font-family: 'Muli', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+    background-color: #fff;
+    
+}
+
+.container{
+    display:flex;
+    width: 90vw;/*90% of the viewport width*/
+}
+
+.panel{
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    color: #fff;
+    /* border-radius: 50px; */
+    cursor: pointer;
+    flex: 0.5; /*give equal space to all panels*/
+    margin: 2px;
+    position: relative;/*to position the heading*/
+    transition: all 0.7s ease-in;
+}
+
+.panel h3 {
+    font-size: 24px; /* Sets the font size */
+    position: absolute; /* Sets the position to absolute */
+    bottom: 20px; /* Aligns the heading at the bottom */
+    left: 20px; /* Aligns the heading at the left */
+    margin: 0; /* Removes default margin */
+    opacity: 0; /* Initial opacity set to 0 */
+  }
+
+  .panel.active {
+    flex: 5; /* Sets the flex value to expand the active panel */
+  }
+
+  .panel.active h3 {
+    opacity: 1; /* Changes opacity to 1 */
+    transition: opacity 0.3s ease-in 0.4s; /* Adds transition effect for opacity */
+  }
+
+  @media (max-width: 480px) {
+    .container {
+      width: 100vw;
+    }
+  }
+  

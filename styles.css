@@ -3,6 +3,7 @@
 body{
     font-family: 'Muli', sans-serif;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -47,6 +48,8 @@ body{
     opacity: 1; /* Changes opacity to 1 */
     transition: opacity 0.3s ease-in 0.4s; /* Adds transition effect for opacity */
   }
+
+
 
   @media (max-width: 480px) {
     .container {
